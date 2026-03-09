@@ -5,19 +5,24 @@
     box-sizing: border-box;
 }
 
-/* VARIABLES (makes colors easier to change later) */
 :root {
-    --primary: #3f5c59;
-    --primary-light: #DC143C;
-    --accent: #FF6B6B;
-    --text: #333;
-    --muted: #666;
-    --bg: #f5f6fa;
+    --primary: #1f3d3a;        /* dark forest green */
+    --primary-light: #2f5d57;  /* medium green */
+    --accent: #6fa89b;         /* soft green highlight */
+    --accent-light: #dce9e7;   /* light green background */
+
+    --text: #2c2c2c;           /* main text */
+    --muted: #6b6b6b;          /* secondary text */
+
+    --bg: #eef2f1;             /* page background */
+    --card-bg: #ffffff;
+
+    --border: #d9e2e1;
 }
 
 /* BODY */
 body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.7;
     color: var(--text);
     background-color: var(--bg);
@@ -114,8 +119,8 @@ header {
 }
 
 .dropdown-menu a:hover {
-    background-color: #f8f9fa;
-    color: #8B0000;
+    background-color: var(--accent-light);
+    color: var(--primary);
 }
 
 /* Hamburger Menu */
@@ -192,23 +197,22 @@ header {
 }
 
 .os-card {
-    background: white;
+    background: var(--card-bg);
     padding: 35px 30px;
     border-radius: 18px;
     box-shadow: 0 8px 25px rgba(0,0,0,0.08);
     text-align: center;
     transition: all 0.25s ease;
-    border: 1px solid rgba(0,0,0,0.05);
+    border: 1px solid var(--border);
 }
 
 .os-card:hover {
     transform: translateY(-8px);
     box-shadow: 0 15px 35px rgba(0,0,0,0.12);
+    border-color: var(--accent);
 }
 
 .os-card h3 {
-    font-size: 1.6rem;
-    margin-bottom: 15px;
     color: var(--primary);
 }
 
@@ -229,14 +233,14 @@ header {
 }
 
 .card-link:hover {
+    background: var(--primary-light);
     transform: translateY(-2px);
-    box-shadow: 0 8px 18px rgba(139,0,0,0.35);
 }
 
 /* Features Section */
 .features {
     padding: 80px 0;
-    background: white;
+    background: var(--accent-light);
 }
 
 .features h2 {
@@ -262,7 +266,7 @@ header {
 .feature h3 {
     font-size: 1.5rem;
     margin-bottom: 15px;
-    color: #8B0000;
+    color: var(--primary);
 }
 
 .feature p {
@@ -284,7 +288,7 @@ header {
 
 .os-header h1 {
     font-size: 3rem;
-    color: #8B0000;
+    color: var(--primary);
     margin-bottom: 20px;
 }
 
@@ -384,7 +388,7 @@ header {
     content: "✓";
     position: absolute;
     left: 0;
-    color: #8B0000;
+    color: var(--primary);
     font-weight: bold;
 }
 
@@ -421,13 +425,13 @@ header {
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 5px 20px rgba(0,0,0,0.1);
-    border-left: 5px solid #8B0000;
+    border-left: 5px solid var(--primary);
 }
 
 .activity-card h3 {
     font-size: 1.5rem;
     margin-bottom: 15px;
-    color: #8B0000;
+    color: var(--primary);
 }
 
 .activity-card p {
@@ -449,7 +453,7 @@ header {
 
 .about-header h1 {
     font-size: 3rem;
-    color: #8B0000;
+    color: var(--primary);
     margin-bottom: 20px;
 }
 
@@ -467,7 +471,7 @@ header {
 }
 
 footer {
-    background: #1f2a36;
+    background: #152b29;
     color: white;
     padding: 50px 0;
     margin-top: 80px;
@@ -495,7 +499,7 @@ footer {
         left: -100%;
         top: 70px;
         flex-direction: column;
-        background-color: #8B0000;
+        background-color: var(--primary);
         width: 100%;
         text-align: center;
         transition: 0.3s;
@@ -589,7 +593,7 @@ footer {
 
 .activity-header h1 {
     font-size: 2.5rem;
-    color: #8B0000;
+    color: var(--primary);
     margin-bottom: 20px;
 }
 
@@ -609,7 +613,7 @@ footer {
 .video-section h2,
 .tips-section h2 {
     font-size: 1.8rem;
-    color: #8B0000;
+    color: var(--primary);
     margin-bottom: 20px;
 }
 
@@ -651,7 +655,7 @@ footer {
     background: #f8f9fa;
     padding: 25px;
     border-radius: 10px;
-    border-left: 4px solid #8B0000;
+    border-left: 4px solid var(--primary);
 }
 
 .tips-section li {
@@ -659,7 +663,7 @@ footer {
 }
 
 strong {
-    color: #8B0000;
+    color: var(--primary);
 }
 
 @media (max-width: 768px) {
