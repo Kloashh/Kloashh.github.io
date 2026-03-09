@@ -1,20 +1,31 @@
+/* GLOBAL RESET */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    color: #333;
-    background-color: #f8f9fa;
+/* VARIABLES (makes colors easier to change later) */
+:root {
+    --primary: #8B0000;
+    --primary-light: #DC143C;
+    --accent: #FF6B6B;
+    --text: #333;
+    --muted: #666;
+    --bg: #f5f6fa;
 }
 
-/* Header and Navigation */
+/* BODY */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.7;
+    color: var(--text);
+    background-color: var(--bg);
+}
+
 header {
-    background: linear-gradient(135deg, #8B0000, #DC143C);
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
+    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
     position: sticky;
     top: 0;
     z-index: 1000;
@@ -22,18 +33,19 @@ header {
 
 .nav-container {
     max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
+    margin: auto;
+    padding: 0 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 70px;
+    height: 75px;
 }
 
 .logo h1 {
     color: white;
-    font-size: 1.8rem;
-    font-weight: 600;
+    font-size: 1.9rem;
+    font-weight: 700;
+    letter-spacing: 1px;
 }
 
 .nav-menu {
@@ -46,16 +58,16 @@ header {
     color: white;
     text-decoration: none;
     font-weight: 500;
-    padding: 10px 15px;
-    border-radius: 5px;
-    transition: all 0.3s ease;
+    padding: 10px 16px;
+    border-radius: 6px;
+    transition: all 0.25s ease;
 }
 
 .nav-menu a:hover,
 .nav-menu a.active {
-    background-color: rgba(255,255,255,0.1);
+    background: rgba(255,255,255,0.15);
+    color: white;
     transform: translateY(-2px);
-    color: #FF6B6B;
 }
 
 /* Dropdown Menu */
@@ -121,47 +133,40 @@ header {
     transition: 0.3s;
 }
 
-/* Hero Section */
 .hero {
-    background: linear-gradient(135deg, #8B0000 0%, #DC143C 100%);
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
     color: white;
-    padding: 100px 0;
+    padding: 120px 0;
     text-align: center;
 }
 
-.hero-content {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
 .hero h1 {
-    font-size: 3.5rem;
+    font-size: 3.6rem;
     margin-bottom: 20px;
     font-weight: 700;
 }
 
 .hero p {
-    font-size: 1.2rem;
-    margin-bottom: 30px;
-    opacity: 0.9;
+    font-size: 1.25rem;
+    margin-bottom: 35px;
+    opacity: 0.95;
 }
 
 .cta-button {
     display: inline-block;
     background: white;
-    color: #667eea;
-    padding: 15px 30px;
+    color: var(--primary);
+    padding: 16px 36px;
     text-decoration: none;
     border-radius: 50px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+    font-weight: 700;
+    transition: all 0.25s ease;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
 }
 
 .cta-button:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(139,0,0,0.3);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
 }
 
 /* Installations Grid */
@@ -188,45 +193,44 @@ header {
 
 .os-card {
     background: white;
-    padding: 30px;
-    border-radius: 15px;
-    box-shadow: 0 5px 20px rgba(0,0,0,0.1);
+    padding: 35px 30px;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.08);
     text-align: center;
-    transition: all 0.3s ease;
-    border: 2px solid transparent;
+    transition: all 0.25s ease;
+    border: 1px solid rgba(0,0,0,0.05);
 }
 
 .os-card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 30px rgba(0,0,0,0.15);
-    border-color: #8B0000;
+    transform: translateY(-8px);
+    box-shadow: 0 15px 35px rgba(0,0,0,0.12);
 }
 
 .os-card h3 {
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     margin-bottom: 15px;
-    color: #8B0000;
+    color: var(--primary);
 }
 
 .os-card p {
-    margin-bottom: 20px;
-    color: #666;
+    margin-bottom: 22px;
+    color: var(--muted);
 }
 
 .card-link {
     display: inline-block;
-    background: #8B0000;
+    background: linear-gradient(135deg, var(--primary), var(--primary-light));
     color: white;
-    padding: 10px 20px;
+    padding: 11px 24px;
     text-decoration: none;
-    border-radius: 25px;
-    font-weight: 500;
-    transition: all 0.3s ease;
+    border-radius: 30px;
+    font-weight: 600;
+    transition: all 0.25s ease;
 }
 
 .card-link:hover {
-    background: #DC143C;
     transform: translateY(-2px);
+    box-shadow: 0 8px 18px rgba(139,0,0,0.35);
 }
 
 /* Features Section */
@@ -462,34 +466,22 @@ header {
     color: #555;
 }
 
-/* Footer */
 footer {
-    background: #2c3e50;
+    background: #1f2a36;
     color: white;
-    padding: 40px 0;
+    padding: 50px 0;
     margin-top: 80px;
 }
 
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 20px;
-    text-align: center;
-}
-
-.footer-links {
-    margin-top: 20px;
-}
-
 .footer-links a {
-    color: white;
+    color: #ccc;
     text-decoration: none;
     margin: 0 15px;
-    transition: color 0.3s ease;
+    transition: 0.2s;
 }
 
 .footer-links a:hover {
-    color: #DC143C;
+    color: var(--accent);
 }
 
 /* Responsive Design */
