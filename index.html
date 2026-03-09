@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="strict-origin-when-cross-origin" />
+    <title>OS Installations - Complete Windows OS Installation Guides</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <div class="logo">
+                    <h1>PITOGO</h1>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">Home</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Installations</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="windows-95.html">Windows 95</a></li>
+                            <li><a href="windows-98.html">Windows 98</a></li>
+                            <li><a href="windows-2000.html">Windows 2000</a></li>
+                            <li><a href="windows-me.html">Windows ME</a></li>
+                            <li><a href="windows-xp.html">Windows XP</a></li>
+                            <li><a href="windows-server-2003.html">Windows Server 2003</a></li>
+                            <li><a href="windows-vista.html">Windows Vista</a></li>
+                            <li><a href="windows-server-2008.html">Windows Server 2008</a></li>
+                            <li><a href="windows-7.html">Windows 7</a></li>
+                            <li><a href="windows-8.html">Windows 8</a></li>
+                            <li><a href="windows-server-2012.html">Windows Server 2012</a></li>
+                            <li><a href="windows-10.html">Windows 10</a></li>
+                            <li><a href="windows-11.html">Windows 11</a></li>
+                        </ul>
+                    </li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle">Activities</a>
+                        <ul class="dropdown-menu">
+                            <li><a href="adding-users.html">Adding Users</a></li>
+                            <li><a href="dhcp-role-domain.html">DHCP Role and Domain</a></li>
+                            <li><a href="raid-installations.html">RAID Installations</a></li>
+                            <li><a href="application-web-server.html">Application and Web Server</a></li>
+                            <li><a href="file-server.html">File Server</a></li>
+                            <li><a href="group-policy.html">Group Policy</a></li>
+                            <li><a href="windows-deployment-services.html">Windows Deployment Services</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="about.html">About Me</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Complete Windows OS Installation Guides</h1>
+                <p>Step-by-step tutorials for installing every Windows operating system from Windows 95 to Windows 11. Learn OS installations with clear instructions and video guides.</p>
+                <a href="#installations" class="cta-button" onclick="scrollToInstallations(event)">Browse Installations</a>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <p>&copy; 2026 OS Installations. Complete guides for Windows OS installations.</p>
+            <div class="footer-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About Me</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-menu');
+        
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+        });
+
+        // Dropdown menus
+        const dropdownToggles = document.querySelectorAll('.dropdown-toggle');
+        
+        dropdownToggles.forEach(toggle => {
+            toggle.addEventListener('click', (e) => {
+                e.preventDefault();
+                
+                // Close all other dropdowns
+                document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                    if (menu !== toggle.nextElementSibling) {
+                        menu.classList.remove('show');
+                    }
+                });
+                
+                // Toggle current dropdown
+                const dropdownMenu = toggle.nextElementSibling;
+                dropdownMenu.classList.toggle('show');
+            });
+        });
+
+        // Close dropdowns when clicking outside
+        document.addEventListener('click', (e) => {
+            if (!e.target.matches('.dropdown-toggle')) {
+                document.querySelectorAll('.dropdown-menu').forEach(menu => {
+                    menu.classList.remove('show');
+                });
+            }
+        });
+
+        // Scroll to installations section
+        function scrollToInstallations(event) {
+            event.preventDefault();
+            const dropdown = document.querySelector('.dropdown');
+            const dropdownMenu = document.querySelector('.dropdown-menu');
+            
+            // Show the dropdown menu
+            dropdownMenu.classList.add('show');
+            
+            // Scroll to the dropdown
+            dropdown.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+    </script>
+</body>
+</html>
