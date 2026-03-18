@@ -82,14 +82,47 @@
                 <h2>Video Tutorial</h2>
                 <div class="video-container">
                     <div class="video-wrapper">
-                        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.06);border-radius:10px;">
-                            <div style="text-align:center;padding:24px;">
-                                <h3 style="margin-bottom:8px;color:var(--primary);">Video coming soon</h3>
-                                <p style="color:var(--muted);">This case study part doesn’t have a video yet.</p>
-                            </div>
-                        </div>
+                        <iframe src="https://www.youtube-nocookie.com/embed/szmiN_IvZZg?wmode=opaque&rel=0&showinfo=0" 
+                                frameborder="0" 
+                                allowfullscreen=""
+                                referrerpolicy="strict-origin-when-cross-origin">
+                        </iframe>
                     </div>
                 </div>
+            </div>
+            <div class="instructions">
+                <h2>Instructions</h2>
+                <pre style="white-space: pre-wrap; line-height: 1.6; font-size: 0.98rem;">part 8. group policies
+
+    I. each department should have its own desktop wallpaper
+    II. restrict/disable the following:
+        a.    enable: prohibit access to control panel and pc settings
+        b.    enable: network security: do not store lan manager hash value on next password change
+        c.    enable: prevent access to the command prompt
+        d.    enable: no auto-restart with logged on users for scheduled automatic updates installations
+        e.    enable: all removable storage classes: deny all accesses
+        f.    enable: prohibit user install
+        g.    disable: accounts: guest account status
+        h.    minimum password length set to at least 12 characters
+        i.    maximum password age 42 days
+        j.    audit directory service access and audit directory service changes. group policy object (gpo) settings should only be accessed by it admins
+        k.    account policies - account lockout policy :  account lockout duration : 30 minutes
+        l.    account lockout threshold : 3 invalid logon attempts
+        m.    reset account lockout counter affter : 30 minutes
+        n.    remove links and access to windows update: user(enable), admin(disable)
+        o.    remove network connections from the start menu: user(enable), admin(disable)
+        p.    remove help menu from the start menu: user(enable), admin(disable)
+        q.    remove run menu from the start menu: user(enable), admin(disable)
+        r.    remove my pictures icon menu from the start menu: user(enable), admin(disable)
+        s.    remove my music icon menu from the start menu: user(enable), admin(disable)
+        t.    remove my network places icon menu from the start menu: user(enable), admin(disable)
+        u.    add logoff on the start menu: enable
+        v.    remove task manager from ctrl+alt+del: user(enable), admin(disable)
+        w.    internet explorer browser title: title bar text: &lt;domain name&gt;
+        x.    prohibit access to properties of components of a lan connections: user(enable), admin(disable)
+        y.    prevent access to the command prompt: user(enable), admin(disable)
+        z.    prevent access to the registry editing tools: user(enable), admin(disable)
+        aa.    prohibit access to the control panel: user(enable), admin(disable)</pre>
             </div>
         </div>
     </main>

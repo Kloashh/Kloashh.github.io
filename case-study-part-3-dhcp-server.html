@@ -82,14 +82,22 @@
                 <h2>Video Tutorial</h2>
                 <div class="video-container">
                     <div class="video-wrapper">
-                        <div style="position:absolute;inset:0;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,0.06);border-radius:10px;">
-                            <div style="text-align:center;padding:24px;">
-                                <h3 style="margin-bottom:8px;color:var(--primary);">Video coming soon</h3>
-                                <p style="color:var(--muted);">This case study part doesn’t have a video yet.</p>
-                            </div>
-                        </div>
+                        <iframe src="https://www.youtube-nocookie.com/embed/pRwBO_Q5iRg?wmode=opaque&rel=0&showinfo=0" 
+                                frameborder="0" 
+                                allowfullscreen=""
+                                referrerpolicy="strict-origin-when-cross-origin">
+                        </iframe>
                     </div>
                 </div>
+            </div>
+            <div class="instructions">
+                <h2>Instructions</h2>
+                <pre style="white-space: pre-wrap; line-height: 1.6; font-size: 0.98rem;">part 3. DHCP server
+    I. IP Block 172.31.0.0 /16, 10.0.0.0 /8
+    II. router ip address is valid IP address
+    III. DNS server IP address is the same as the DHCP server. also add google and opendns public dns server ip addresses.
+    IV. ip address lease expires every 8 hrs.
+    V. do not distribute the first 30 and last 30 valid IP addresses.</pre>
             </div>
         </div>
     </main>
